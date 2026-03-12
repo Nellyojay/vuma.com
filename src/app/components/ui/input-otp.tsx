@@ -25,7 +25,15 @@ function InputOTP({
     >
       <OTPInput
         {...props}
-        inputStyle={{ width: "2rem", height: "2rem", textAlign: "center", fontSize: "1rem" }}
+        renderInput={(inputProps) => (
+          <input
+            {...inputProps}
+            className={cn(
+              "otp-input",
+              inputProps.className,
+            )}
+          />
+        )}
       />
     </div>
   );
