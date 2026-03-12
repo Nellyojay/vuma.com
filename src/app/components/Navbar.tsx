@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { COMPANY_NAME } from '../constants/company-name';
+import appIcon from '../assets/images/vuma-app-icon.png';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +23,10 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white text-lg font-bold">V</span>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <img src={appIcon} alt={COMPANY_NAME.charAt(0).toLocaleUpperCase()} className="w-full h-full rounded-lg object-contain" />
             </div>
-            <span className="text-white text-xl font-bold">VUMA</span>
+            <span className="text-white text-xl font-bold">{COMPANY_NAME.toLocaleUpperCase()}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -34,8 +36,8 @@ export function Navbar() {
                 key={link.path}
                 to={link.path}
                 className={`text-sm transition-colors ${isActive(link.path)
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
+                  ? 'text-primary'
+                  : 'text-gray-300 hover:text-white'
                   }`}
               >
                 {link.name}
@@ -63,8 +65,8 @@ export function Navbar() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block py-2 text-sm transition-colors ${isActive(link.path)
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
+                  ? 'text-primary'
+                  : 'text-gray-300 hover:text-white'
                   }`}
               >
                 {link.name}

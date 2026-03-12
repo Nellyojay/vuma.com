@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { DownloadButton } from '../components/DownloadButton';
 import { Smartphone, Zap, Shield, Users } from 'lucide-react';
+import { COMPANY_NAME } from '../constants/company-name';
+import appIcon from '../assets/images/vuma-app-icon.png';
 
 export function Download() {
   return (
@@ -15,13 +17,13 @@ export function Download() {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-8">
-              <Smartphone size={40} />
+              <img src={appIcon} alt={COMPANY_NAME} className="rounded-xl" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              Download Vuma
+              Download {COMPANY_NAME}
             </h1>
             <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-              Join thousands of users already connecting and sharing on Vuma.
+              Join thousands of users already connecting and sharing on {COMPANY_NAME}.
               Download the app today and become part of the community.
             </p>
 
@@ -49,10 +51,10 @@ export function Download() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Download Vuma?
+              Why Download {COMPANY_NAME}?
             </h2>
             <p className="text-gray-400 text-lg">
-              Here's what makes Vuma special
+              Here's what makes {COMPANY_NAME} special
             </p>
           </motion.div>
 
@@ -64,7 +66,7 @@ export function Download() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4">
                 <Zap className="text-white" size={24} />
               </div>
               <h3 className="text-white font-semibold mb-2">Lightning Fast</h3>
@@ -80,7 +82,7 @@ export function Download() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4">
                 <Shield className="text-white" size={24} />
               </div>
               <h3 className="text-white font-semibold mb-2">Secure & Private</h3>
@@ -96,7 +98,7 @@ export function Download() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4">
                 <Users className="text-white" size={24} />
               </div>
               <h3 className="text-white font-semibold mb-2">Growing Community</h3>
@@ -112,7 +114,7 @@ export function Download() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4">
                 <Smartphone className="text-white" size={24} />
               </div>
               <h3 className="text-white font-semibold mb-2">Mobile First</h3>
@@ -139,7 +141,7 @@ export function Download() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">Android</h3>
+                <h3 className="text-lg font-semibold mb-3 text-primary">Android</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• Android 8.0 or higher</li>
                   <li>• 100 MB free space</li>
@@ -147,7 +149,7 @@ export function Download() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-purple-400">iOS</h3>
+                <h3 className="text-lg font-semibold mb-3 text-primary">iOS</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• iOS 13.0 or later</li>
                   <li>• 100 MB free space</li>
