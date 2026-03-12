@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
       { path: "features", Component: Features },
       { path: "download", Component: Download },
       { path: "about", Component: About },
-      { path: "notfound", Component: NotFound },
+      { path: "*", Component: NotFound },
     ],
   },
 ]);
