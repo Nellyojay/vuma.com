@@ -6,7 +6,7 @@ import { Download } from "./pages/Download";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     Component: Root,
