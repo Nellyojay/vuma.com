@@ -1,9 +1,12 @@
 import { Link } from 'react-router';
 import { Home } from 'lucide-react';
+import ScrollToTop from '../../constants/scrollToTop';
 
 export function NotFound() {
   return (
     <div className="min-h-screen bg-black text-white pt-16 flex items-center justify-center">
+      <ScrollToTop />
+
       <div className="text-center px-4">
         <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-red bg-clip-text text-transparent">
           404

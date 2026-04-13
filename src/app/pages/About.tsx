@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { Target, Heart, Shield, Users } from 'lucide-react';
 import { COMPANY_NAME } from '../constants/company-name';
+import ScrollToTop from '../../constants/scrollToTop';
 
 export function About() {
   return (
     <div className="min-h-screen bg-black text-white pt-16">
+      <ScrollToTop />
+
       {/* Hero Section */}
       <section className="py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

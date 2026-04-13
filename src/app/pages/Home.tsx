@@ -4,10 +4,13 @@ import { FeatureCard } from '../components/FeatureCard';
 import { ImagePlus, MessageCircle, Send, UserPlus, Lock } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { COMPANY_NAME } from '../constants/company-name';
+import ScrollToTop from '../../constants/scrollToTop';
 
 export function Home() {
   return (
     <div className="min-h-screen bg-black text-white pt-16">
+      <ScrollToTop />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent pointer-events-none" />

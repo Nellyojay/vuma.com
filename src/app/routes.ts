@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { Root } from "./components/Root";
 import { Home } from "./pages/Home";
 import { Features } from "./pages/Features";
@@ -6,7 +6,7 @@ import { Download } from "./pages/Download";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     Component: Root,

@@ -2,10 +2,13 @@ import { motion } from 'framer-motion';
 import { FeatureCard } from '../components/FeatureCard';
 import { ImagePlus, MessageCircle, Send, UserPlus, Lock, Bell, Heart, Sparkles, Shield, Users } from 'lucide-react';
 import { COMPANY_NAME } from '../constants/company-name';
+import ScrollToTop from '../../constants/scrollToTop';
 
 export function Features() {
   return (
     <div className="min-h-screen bg-black text-white pt-16">
+      <ScrollToTop />
+
       {/* Header */}
       <section className="py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
