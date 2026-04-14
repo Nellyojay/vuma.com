@@ -1,9 +1,10 @@
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { useEffect } from 'react';
 
 export function Root() {
+  const location = useLocation();
   // Apply dark mode by default
   useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -11,9 +12,13 @@ export function Root() {
 
   return (
     <div className="min-h-screen bg-black">
-      <Navbar />
+      {location.pathname === '/reset-password' ? null : (
+        <Navbar />
+      )}
       <Outlet />
-      <Footer />
+      {location.pathname === '/reset-password' ? null : (
+        <Footer />
+      )}
     </div>
   );
 }

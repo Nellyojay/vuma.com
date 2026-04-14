@@ -5,6 +5,7 @@ import { Features } from "./pages/Features";
 import { Download } from "./pages/Download";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
+import ResetPassword from "./pages/PasswordReset/reset-password";
 
 export const router = createHashRouter([
   {
@@ -15,6 +16,7 @@ export const router = createHashRouter([
       { path: "features", Component: Features },
       { path: "download", Component: Download },
       { path: "about", Component: About },
+      { path: "reset-password", Component: ResetPassword },
       { path: "*", Component: NotFound },
     ],
   },
