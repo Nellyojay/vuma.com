@@ -5,8 +5,23 @@ import { ImagePlus, MessageCircle, Send, UserPlus, Lock } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { COMPANY_NAME } from '../constants/company-name';
 import ScrollToTop from '../../constants/scrollToTop';
+import supabase from '../../supabaseClient';
+import { useEffect } from 'react';
 
 export function Home() {
+  const logSupabase = async () => {
+    const { data, error } = await supabase.from('posts').select('*');
+    if (error) {
+      console.error('Error fetching posts:', error);
+    } else {
+      console.log('Posts data:', data);
+    }
+  }
+
+  useEffect(() => {
+    logSupabase();
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white pt-16">
       <ScrollToTop />
