@@ -12,11 +12,11 @@ export function Root() {
 
   return (
     <div className="min-h-screen bg-black">
-      {location.pathname === '/reset-password' ? null : (
+      {location.pathname === '/reset-password' || location.pathname === '/welcome-screen' ? null : (
         <Navbar />
       )}
       <Outlet />
-      {location.pathname === '/reset-password' ? null : (
+      {location.pathname === '/reset-password' || location.pathname === '/welcome-screen' ? null : (
         <Footer />
       )}
     </div>
