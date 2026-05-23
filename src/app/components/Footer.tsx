@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { COMPANY_NAME } from '../constants/company-name';
+import { APP_NAME } from '../constants/company-name';
 import appIcon from '../assets/images/vuma-app-icon.png';
 
 export function Footer() {
@@ -11,9 +11,9 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <img src={appIcon} alt={COMPANY_NAME.charAt(0).toLocaleUpperCase()} className="rounded-lg" />
+                <img src={appIcon} alt={APP_NAME.charAt(0).toLocaleUpperCase()} className="rounded-lg" />
               </div>
-              <span className="text-white text-xl font-bold">{COMPANY_NAME.toLocaleUpperCase()}</span>
+              <span className="text-white text-xl font-bold">{APP_NAME.toLocaleUpperCase()}</span>
             </div>
             <p className="text-gray-400 text-sm">
               Connect through posts. Share your moments.
@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-center text-gray-400 text-sm">
-            © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
+            © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Heart, Shield, Users } from 'lucide-react';
-import { COMPANY_NAME } from '../constants/company-name';
+import { APP_NAME } from '../constants/company-name';
 import ScrollToTop from '../../constants/scrollToTop';
 
 export function About() {
@@ -18,7 +18,7 @@ export function About() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              About {COMPANY_NAME}
+              About {APP_NAME}
             </h1>
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
               A new way to connect, share, and discover meaningful relationships online.
@@ -34,15 +34,15 @@ export function About() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                {COMPANY_NAME} was born from a simple idea: social media should bring people together,
+                {APP_NAME} was born from a simple idea: social media should bring people together,
                 not push them apart. In a world where online interactions often feel superficial
                 and overwhelming, we wanted to create something different.
               </p>
               <p>
-                We built {COMPANY_NAME} to be a platform where authenticity matters, where privacy is respected,
+                We built {APP_NAME} to be a platform where authenticity matters, where privacy is respected,
                 and where meaningful connections can flourish. Whether you're sharing a moment through
                 a photo, expressing your thoughts anonymously, or having a real conversation with someone
-                new, {COMPANY_NAME} is designed to make those experiences better.
+                new, {APP_NAME} is designed to make those experiences better.
               </p>
               <p>
                 Our chat request system ensures that every conversation starts with mutual interest.

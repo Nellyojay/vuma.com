@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { Check } from 'lucide-react';
 import { useMemo } from 'react';
+import { APP_NAME } from '../constants/company-name';
 
 export default function WelcomeScreen() {
   const location = useLocation();
@@ -39,7 +40,7 @@ export default function WelcomeScreen() {
           </div>
         ) : (
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl font-extrabold">Welcome to Vuma</h1>
+            <h1 className="text-3xl sm:text-4xl font-extrabold">Welcome to {APP_NAME}</h1>
             <p className="text-gray-300 max-w-2xl mx-auto">
               If you just clicked an email confirmation link, your email should now be
               confirmed. If you experience any issues, please check the link again or

@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { COMPANY_NAME } from '../constants/company-name';
+import { APP_NAME } from '../constants/company-name';
 import appIcon from '../assets/images/vuma-app-icon.png';
 
 export function Navbar() {
@@ -24,9 +24,9 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <img src={appIcon} alt={COMPANY_NAME.charAt(0).toLocaleUpperCase()} className="w-full h-full rounded-lg object-contain" />
+              <img src={appIcon} alt={APP_NAME.charAt(0).toLocaleUpperCase()} className="w-full h-full rounded-lg object-contain" />
             </div>
-            <span className="text-white text-xl font-bold">{COMPANY_NAME.toLocaleUpperCase()}</span>
+            <span className="text-white text-xl font-bold">{APP_NAME.toLocaleUpperCase()}</span>
           </Link>
 
           {/* Desktop Navigation */}

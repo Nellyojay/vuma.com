@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./reset.css";
 import supabase from "../../../supabaseClient";
 import ScrollToTop from "../../../constants/scrollToTop";
+import { APP_NAME } from "../../constants/company-name";
 
 export default function ResetPassword() {
   const [password, setPassword] = useState("");
@@ -116,7 +117,7 @@ export default function ResetPassword() {
 
       <div className="reset-card">
         <div className="hero">
-          <div className="badge w-full">Vuma</div>
+          <div className="badge w-full">{APP_NAME}</div>
           <h2>Reset your password</h2>
           <p className="intro text-gray-500">Securely update your password and get back into your account.</p>
         </div>

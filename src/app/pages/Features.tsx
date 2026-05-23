@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FeatureCard } from '../components/FeatureCard';
 import { ImagePlus, MessageCircle, Send, UserPlus, Lock, Bell, Heart, Sparkles, Shield, Users } from 'lucide-react';
-import { COMPANY_NAME } from '../constants/company-name';
+import { APP_NAME } from '../constants/company-name';
 import ScrollToTop from '../../constants/scrollToTop';
 
 export function Features() {
@@ -22,7 +22,7 @@ export function Features() {
               Powerful Features
             </h1>
             <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
-              Discover all the amazing features that make {COMPANY_NAME} the best platform for sharing and connecting.
+              Discover all the amazing features that make {APP_NAME} the best platform for sharing and connecting.
             </p>
           </motion.div>
 
@@ -117,7 +117,7 @@ export function Features() {
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold mb-4">Privacy First</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Your privacy matters. With {COMPANY_NAME}, you control what you share and who sees it.
+                  Your privacy matters. With {APP_NAME}, you control what you share and who sees it.
                   Our chat request system ensures you only talk to people you want to connect with,
                   and anonymous confessions let you express yourself without fear.
                 </p>
@@ -125,7 +125,7 @@ export function Features() {
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-2xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold mb-4">Built for Connection</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  {COMPANY_NAME} isn't just another social platform—it's a community. Our features are designed
+                  {APP_NAME} isn't just another social platform—it's a community. Our features are designed
                   to foster genuine connections, meaningful conversations, and authentic self-expression
                   in a safe, welcoming environment.
                 </p>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { DownloadButton } from '../components/DownloadButton';
 import { Smartphone, Zap, Shield, Users } from 'lucide-react';
-import { COMPANY_NAME } from '../constants/company-name';
+import { APP_NAME } from '../constants/company-name';
 import appIcon from '../assets/images/vuma-app-icon.png';
 import ScrollToTop from '../../constants/scrollToTop';
 
@@ -20,13 +20,13 @@ export function Download() {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-8">
-              <img src={appIcon} alt={COMPANY_NAME} className="rounded-xl" />
+              <img src={appIcon} alt={APP_NAME} className="rounded-xl" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              Download {COMPANY_NAME}
+              Download {APP_NAME}
             </h1>
             <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-              Join thousands of users already connecting and sharing on {COMPANY_NAME}.
+              Join thousands of users already connecting and sharing on {APP_NAME}.
               Download the app today and become part of the community.
             </p>
 
@@ -54,10 +54,10 @@ export function Download() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Download {COMPANY_NAME}?
+              Why Download {APP_NAME}?
             </h2>
             <p className="text-gray-400 text-lg">
-              Here's what makes {COMPANY_NAME} special
+              Here's what makes {APP_NAME} special
             </p>
           </motion.div>
 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FeatureCard } from '../components/FeatureCard';
 import { ImagePlus, MessageCircle, Send, UserPlus, Lock } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { COMPANY_NAME } from '../constants/company-name';
+import { APP_NAME } from '../constants/company-name';
 import ScrollToTop from '../../constants/scrollToTop';
 
 export function Home() {
@@ -27,14 +27,14 @@ export function Home() {
               </h1>
               <p className="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed">
                 Share text, photos, and videos while connecting with people around the world.
-                Join {COMPANY_NAME} to discover a new way to express yourself and build meaningful connections.
+                Join {APP_NAME} to discover a new way to express yourself and build meaningful connections.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/download"
                   className="px-8 py-4 bg-primary rounded-xl font-semibold hover:shadow-lg hover:shadow-accent/40 transition-all duration-300 text-center text-white hover:text-white/90"
                 >
-                  Download {COMPANY_NAME}
+                  Download {APP_NAME}
                 </Link>
                 <Link
                   to="/features"
@@ -78,7 +78,7 @@ export function Home() {
               Everything You Need
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              {COMPANY_NAME} brings together the best features to help you connect, share, and discover.
+              {APP_NAME} brings together the best features to help you connect, share, and discover.
             </p>
           </motion.div>
 
@@ -136,7 +136,7 @@ export function Home() {
             className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl p-8 md:p-12 border border-white/10 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Join {COMPANY_NAME}?
+              Ready to Join {APP_NAME}?
             </h2>
             <p className="text-gray-300 text-lg mb-8">
               Download the app today and start connecting with people who matter.
