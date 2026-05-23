@@ -16,3 +16,5 @@ export const APPNAME = async () => {
 }
 
 export const APP_NAME = await APPNAME();
+
+document.getElementById('WEB-TITLE')!.textContent = APP_NAME;
