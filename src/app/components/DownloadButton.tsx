@@ -1,7 +1,11 @@
+import { APP_NAME } from "../constants/company-name";
+
 interface DownloadButtonProps {
   platform: 'android' | 'ios' | 'apk';
   className?: string;
 }
+
+const APP_VERSION = '2.2.7';
 
 export function DownloadButton({ platform, className = '' }: DownloadButtonProps) {
   const configs = {
@@ -37,10 +41,30 @@ export function DownloadButton({ platform, className = '' }: DownloadButtonProps
   };
 
   const config = configs[platform];
+  const isApk = platform === 'apk';
+  const downloadFileName = `${APP_NAME}.${APP_VERSION}.apk`;
+  const buttonClassNames = `flex items-center gap-3 px-6 py-3 border rounded-xl transition-all duration-300 group ${className} ${isApk ? 'bg-white/10 hover:bg-white/20 border-white/20' : 'bg-white/10 border-white/10 cursor-not-allowed opacity-60'}`;
+
+  const handleDownload = () => {
+    if (!isApk) {
+      return;
+    }
+
+    const anchor = document.createElement('a');
+    anchor.href = `/files/apk/${downloadFileName}`;
+    anchor.download = downloadFileName;
+    anchor.rel = 'noreferrer noopener';
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+  };
 
   return (
     <button
-      className={`flex items-center gap-3 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-all duration-300 group ${className}`}
+      type="button"
+      onClick={handleDownload}
+      disabled={true}
+      className={buttonClassNames}
     >
       <div className="text-white group-hover:scale-110 transition-transform">
         {config.icon}
