@@ -51,7 +51,7 @@ export function DownloadButton({ platform, className = '' }: DownloadButtonProps
     }
 
     const anchor = document.createElement('a');
-    anchor.href = `/files/apk/${downloadFileName}`;
+    anchor.href = '';
     anchor.download = downloadFileName;
     anchor.rel = 'noreferrer noopener';
     document.body.appendChild(anchor);
