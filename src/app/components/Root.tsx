@@ -11,7 +11,7 @@ export function Root() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen w-full bg-black">
       {location.pathname === '/reset-password' || location.pathname === '/welcome-screen' ? null : (
         <Navbar />
       )}

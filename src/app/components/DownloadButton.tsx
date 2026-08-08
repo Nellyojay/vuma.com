@@ -51,10 +51,10 @@ export function DownloadButton({ platform, className = '' }: DownloadButtonProps
     }
 
     const anchor = document.createElement('a');
-    anchor.href = '';
-    anchor.download = downloadFileName;
-    anchor.rel = 'noreferrer noopener';
-    document.body.appendChild(anchor);
+    anchor.href = ''; // Replace with the actual APK file URL
+    anchor.download = downloadFileName; // Set the desired file name for the downloaded APK
+    anchor.rel = 'noreferrer noopener'; // This is important for security reasons when opening links in a new tab
+    document.body.appendChild(anchor); // This makes the anchor part of the document so that it can be clicked
     anchor.click();
     anchor.remove();
   };
