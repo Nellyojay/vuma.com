@@ -7,16 +7,16 @@ import ScrollToTop from '../../constants/scrollToTop';
 
 export function Download() {
   return (
-    <div className="min-h-screen bg-black text-white pt-16">
+    <div className="min-h-screen bg-black text-white">
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.3 }}
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-8">

@@ -10,12 +10,12 @@ export function Features() {
       <ScrollToTop />
 
       {/* Header */}
-      <section className="py-20 md:py-32">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.3 }}
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
@@ -125,7 +125,7 @@ export function Features() {
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-2xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold mb-4">Built for Connection</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  {APP_NAME} isn't just another social platform—it's a community. Our features are designed
+                  {APP_NAME} isn't just another social platform, it's a community. Our features are designed
                   to foster genuine connections, meaningful conversations, and authentic self-expression
                   in a safe, welcoming environment.
                 </p>

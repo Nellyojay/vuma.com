@@ -5,19 +5,19 @@ import ScrollToTop from '../../constants/scrollToTop';
 
 export function About() {
   return (
-    <div className="min-h-screen bg-black text-white pt-16">
+    <div className="min-h-screen bg-black text-white pt-44 md:pt-16">
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-screen">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.3 }}
+            className="text-center mb-8"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               About {APP_NAME}
             </h1>
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
@@ -154,8 +154,7 @@ export function About() {
             <p className="text-gray-300 text-lg leading-relaxed">
               To create a social platform that prioritizes genuine human connection over engagement metrics.
               We believe in giving people control over their privacy, fostering respectful interactions,
-              and providing tools that enable authentic self-expression. Vuma is more than an app—it's
-              a commitment to making social media better for everyone.
+              and providing tools that enable authentic self-expression
             </p>
           </motion.div>
         </div>
@@ -215,7 +214,7 @@ export function About() {
               <h3 className="text-xl font-bold mb-4 text-pink-400">Privacy First</h3>
               <p className="text-gray-300 leading-relaxed">
                 Your data stays yours. We don't sell your information, and you control exactly
-                who sees what you share. Privacy isn't an afterthought—it's our foundation.
+                who sees what you share. Privacy isn't an afterthought, it's our foundation.
               </p>
             </motion.div>
           </div>

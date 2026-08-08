@@ -9,13 +9,13 @@ import ScrollToTop from '../../constants/scrollToTop';
 export function Home() {
 
   return (
-    <div className="min-h-screen bg-black text-white pt-16">
+    <div className="min-h-screen bg-black text-white">
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-20 md:pt-0">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
