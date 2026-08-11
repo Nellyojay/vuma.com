@@ -51,7 +51,7 @@ export function DownloadButton({ platform, className = '' }: DownloadButtonProps
     }
 
     const anchor = document.createElement('a');
-    anchor.href = ''; // Replace with the actual APK file URL
+    anchor.href = 'https://github.com/Nellyojay/vuma.com/releases/download/Vumio_v2.3.25/vumio_v2.3.25.apk'; // Replace with the actual APK file URL
     anchor.download = downloadFileName; // Set the desired file name for the downloaded APK
     anchor.rel = 'noreferrer noopener'; // This is important for security reasons when opening links in a new tab
     document.body.appendChild(anchor); // This makes the anchor part of the document so that it can be clicked
@@ -63,7 +63,6 @@ export function DownloadButton({ platform, className = '' }: DownloadButtonProps
     <button
       type="button"
       onClick={handleDownload}
-      disabled={true}
       className={buttonClassNames}
     >
       <div className="text-white group-hover:scale-110 transition-transform">
