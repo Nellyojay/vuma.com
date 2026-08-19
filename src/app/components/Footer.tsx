@@ -4,7 +4,7 @@ import appIcon from '../assets/images/vuma-app-icon.png';
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10 mt-20 border-2">
+    <footer className="bg-black border-t-2 border-white/10 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -46,9 +46,9 @@ export function Footer() {
               <a href="#" className="block text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="block text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/terms-and-conditions" className="block text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </a>
+              </Link>
               <a href="#" className="block text-gray-400 hover:text-white text-sm transition-colors">
                 Contact
               </a>
