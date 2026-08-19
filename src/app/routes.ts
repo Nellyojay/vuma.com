@@ -6,6 +6,7 @@ import { Download } from "./pages/Download";
 import { About } from "./pages/About";
 import { NotFound } from "./pages/NotFound";
 import { TermsAndConditions } from "./pages/terms&conditions";
+import { PrivacyAndSecurity } from "./pages/privacy&security";
 import ResetPassword from "./pages/PasswordReset/reset-password";
 import WelcomeScreen from "./pages/welcomeScreen";
 
@@ -19,6 +20,7 @@ export const router = createHashRouter([
       { path: "download", Component: Download },
       { path: "about", Component: About },
       { path: "terms-and-conditions", Component: TermsAndConditions },
+      { path: "privacy-and-security", Component: PrivacyAndSecurity },
       { path: "reset-password", Component: ResetPassword },
       { path: "welcome-screen", Component: WelcomeScreen },
       { path: "*", Component: NotFound },

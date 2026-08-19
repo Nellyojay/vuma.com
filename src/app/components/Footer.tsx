@@ -43,9 +43,9 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy-and-security" className="block text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <Link to="/terms-and-conditions" className="block text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
