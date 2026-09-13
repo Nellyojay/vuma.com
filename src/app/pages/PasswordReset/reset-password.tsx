@@ -10,6 +10,7 @@ export default function ResetPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+  const [sessionReady, setSessionReady] = useState(false);
   const errors = ["not found", "Password"];
   const statusClass = success
     ? "success"
@@ -58,7 +59,45 @@ export default function ResetPassword() {
     return confirm;
   }
 
+  useEffect(() => {
+    const initializeRecoverySession = async () => {
+      const queryParams = new URLSearchParams(window.location.search);
+      const code = queryParams.get("code");
+
+      if (code) {
+        await supabase.auth.exchangeCodeForSession(code);
+      } else {
+        // Hash routing and Supabase recovery links both use the URL hash.
+        const hash = window.location.hash;
+        const tokenStart = hash.indexOf("access_token=");
+
+        if (tokenStart !== -1) {
+          const recoveryParams = new URLSearchParams(hash.slice(tokenStart));
+          const accessToken = recoveryParams.get("access_token");
+          const refreshToken = recoveryParams.get("refresh_token");
+
+          if (accessToken && refreshToken) {
+            await supabase.auth.setSession({ access_token: accessToken, refresh_token: refreshToken });
+          }
+        }
+      }
+
+      const { data } = await supabase.auth.getSession();
+      if (!data.session) {
+        setMessage("This password reset link is invalid or has expired. Please request a new one.");
+      }
+      setSessionReady(Boolean(data.session));
+    };
+
+    initializeRecoverySession();
+  }, []);
+
   const handleReset = async () => {
+    if (!sessionReady) {
+      setMessage("Your reset session is missing or expired. Please request a new password reset link.");
+      return;
+    }
+
     if (!email || !password || !confirmPassword) {
       setMessage("Please enter your email and both password fields.");
       return;
@@ -153,7 +192,7 @@ export default function ResetPassword() {
           maxLength={30}
         />
 
-        <button onClick={handleReset}>Reset Password</button>
+        <button onClick={handleReset} disabled={!sessionReady}>Reset Password</button>
         <p className="support-note">Need help? Contact support and we’ll help you regain access to your account.</p>
       </div>
     </div>
